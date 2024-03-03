@@ -1,0 +1,31 @@
+----------------------------------------------------AWS (S3) INTEGRATION------------------------------------------------------------------------
+CREATE OR REPLACE STORAGE integration s3_int
+TYPE = EXTERNAL_STAGE
+STORAGE_PROVIDER = S3
+ENABLED = TRUE
+STORAGE_AWS_ROLE_ARN ='arn:aws:iam::891377316134:role/retailrole' 
+STORAGE_ALLOWED_LOCATIONS =('s3://retaildataingestion/');
+
+DESC integration s3_int; 
+
+
+USE DATABASE RETAILS;
+USE RETAILS;
+
+
+create or replace file format retail_csv
+    type = 'csv'
+    compression = 'none'
+    field_delimiter = ','
+    field_optionally_enclosed_by = 'none'
+    skip_header = 1 ;
+
+
+CREATE OR REPLACE STAGE RETAIL
+URL ='s3://retaildataingestion'
+file_format = retail_csv
+storage_integration = s3_int;
+
+LIST @RETAIL;
+
+SHOW STAGES;
