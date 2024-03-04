@@ -1,0 +1,66 @@
+Retail Data Analysis
+
+
+This dataset contains household-level transactions over two years from a group
+of 2,500 households who are frequent shoppers at a retailer. It contains all of
+each household’s purchases, not just those from a limited number of categories.
+For households, demographic information as well as direct marketing contact
+history are included.
+
+
+
+
+1. hh_demographic: This table likely contains demographic information
+about households. It may include columns such as household_key (a
+unique identifier for each household), AGE_DESC (age range or category
+of the household), MARITAL_STATUS_CODE (marital status of the
+household), INCOME_DESC (income level or range of the household),
+HOMEOWNER_DESC (homeownership status of the household),
+HOUSEHOLD_SIZE_DESC (size of the household), KID_CATEGORY_DESC
+(number of children in the household), and more. This table provides a
+comprehensive view of the demographic characteristics of each
+household.
+
+
+
+2. campaign_desc: This table likely contains descriptions or details of
+marketing campaigns. It may include columns such as campaign_id (a
+unique identifier for each campaign), campaign_start_date,
+campaign_end_date, campaign_type, and other relevant information.
+
+
+
+3. campaign_table: This table provides information about the different
+marketing campaign Types that have been conducted.
+
+
+
+4. coupon: This table likely contains information about coupons or discounts
+offered to customers. It may include columns such as coupon_id (a unique
+identifier for each coupon), PRODUCT_ID,CAMPAIGN and other relevant
+details. This table provides information about the available coupons on
+different Product.
+
+
+
+
+5. coupon_redempt: This table likely contains data about coupon
+redemptions. It may include columns such as household_key, coupon_id,
+redemption_date, and other relevant information. This table helps track
+and analyze the usage and effectiveness of coupons.
+
+
+
+
+6. product: This table likely contains information about different products.
+It may include columns such as product_id, product_name, category,
+brand, price, and other relevant attributes. This table provides details
+about the available products.
+
+
+
+7. transaction_data: This table likely contains data related to customer
+transactions. It may include columns such as household_key,
+BASKET_ID,date, product_id, quantity, price, and other relevant
+information. This table helps track and analyze customer purchases,
+including the products bought, quantities, prices, and transaction details.
