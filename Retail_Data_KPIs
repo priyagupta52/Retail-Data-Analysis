@@ -14,7 +14,7 @@ select * from COUPON_REDEMPT_NEW;
 
 select * from TRANSACTION_NEW;
 
------deparment wise product count
+--------------department wise product count-----------
 SELECT DISTINCT(DEPARTMENT),COUNT(*) AS TOTAL_PRODUCT 
 FROM PRODUCT_RAW
 GROUP BY 1
